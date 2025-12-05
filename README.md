@@ -14,6 +14,13 @@ Visit the [Visual Studio Code website](https://code.visualstudio.com) and instal
 
 ### Other Commands
 
+To setup local deployment for development:
+
+```powershell
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+   npm run local-deploy -- --watch
+```
+
 To run a lint operation (that is, scan your code for errors) use this shortcut command:
 
 ```powershell
