@@ -1,0 +1,49 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "kubi:pink_w"
+    },
+    "components": {
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "north": {
+          "texture": "kubi:pink_w"
+        },
+        "south": {
+          "texture": "kubi:pink_w"
+        },
+        "east": {
+          "texture": "kubi:pink_w"
+        },
+        "west": {
+          "texture": "kubi:pink_w"
+        },
+        "up": {
+          "texture": "kubi:pink"
+        },
+        "down": {
+          "texture": "kubi:pink"
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": "minecraft:geometry.full_block",
+        "material_instances": {
+          "up": {
+            "texture": "kubi:pink"
+          },
+          "down": {
+            "texture": "kubi:pink"
+          },
+          "*": {
+            "texture": "kubi:pink_w",
+            "render_method": "opaque"
+          }
+        }
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.2
+      }
+    }
+  }
+}

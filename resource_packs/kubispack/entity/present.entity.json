@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "kubi:present",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "particle_effects": {
+        "present_found": "kubi:present_found",
+        "present_fireworks": "kubi:present_fireworks"
+      },
+      "textures": {
+        "red": "textures/entity/present_red",
+        "pink": "textures/entity/present_pink",
+        "cyan": "textures/entity/present_cyan"
+      },
+      "geometry": {
+        "default": "geometry.present"
+      },
+      "render_controllers": ["controller.render.present"],
+      "animations": {
+        "nothing": "animation.present.nothing",
+        "idle_bounce": "animation.present.idle_bounce",
+        "idle_bounce_lean": "animation.present.idle_bounce_lean",
+        "idle_bounce_spin": "animation.present.idle_bounce_spin",
+        "lid_shake": "animation.present.lid_shake",
+        "found": "animation.present.death",
+        "idle": "controller.animation.present.idle"
+      },
+      "scripts": { "animate": ["idle"] },
+      "spawn_egg": {
+        "base_color": "#ff0000",
+        "overlay_color": "#12ff00"
+      }
+    }
+  }
+}

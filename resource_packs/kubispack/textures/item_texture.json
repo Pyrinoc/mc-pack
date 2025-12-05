@@ -1,0 +1,9 @@
+{
+    "resource_pack_name": "wiki",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "kubi:teleport_wand": {
+            "textures": "textures/items/teleport_wand"
+        }
+    }
+}

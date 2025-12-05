@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "christmas_lights",
+		"metalness_emissive_roughness": "christmas_lights_mer"
+	}
+}

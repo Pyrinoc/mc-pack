@@ -1,0 +1,66 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.present.fireworks": {
+      "initial_state": "fireworks_on",
+      "states": {
+        "fireworks_on": {
+          "particle_effects": [{ "effect": "present_fireworks" }],
+          "transitions": [{ "fireworks_off": "q.skin_id == 1" }]
+        },
+        "fireworks_off": {
+          "transitions": [{ "fireworks_on": "q.skin_id == 0" }]
+        }
+      }
+    },
+    "controller.animation.present.idle": {
+      "initial_state": "idle_picker",
+      "states": {
+        "idle_picker": {
+          "on_exit": [
+            "v.animation_random_1=math.random(0,1);",
+            "v.animation_random_2=math.random(0,1);",
+            "v.animation_random_3=math.random(0,1);"
+          ],
+          "transitions": [
+            { "found": "q.skin_id == 1" },
+            { "idle_bounce": "Math.random_integer(0,3)<4" },
+            { "idle_bounce_lean": "Math.random_integer(0,3)==10" },
+            { "idle_bounce_spin": "Math.random_integer(0,3)==20" },
+            { "lid_shake": "Math.random_integer(0,3)==30" },
+            { "nothing": "Math.random_integer(0,3)>40" }
+          ]
+        },
+        "found": {
+          "animations": ["found"],
+          "transitions": [{ "idle_picker": "q.all_animations_finished && q.skin_id == 0" }]
+        },
+        "nothing": {
+          "animations": ["nothing"],
+          "transitions": [{ "idle_picker": "query.all_animations_finished || q.skin_id == 1" }],
+          "blend_transition": 0.5
+        },
+        "idle_bounce": {
+          "animations": ["idle_bounce"],
+          "transitions": [{ "idle_picker": "query.all_animations_finished || q.skin_id == 1" }],
+          "blend_transition": 0.5
+        },
+        "idle_bounce_lean": {
+          "animations": ["idle_bounce_lean"],
+          "transitions": [{ "idle_picker": "query.all_animations_finished || q.skin_id == 1" }],
+          "blend_transition": 0.5
+        },
+        "idle_bounce_spin": {
+          "animations": ["idle_bounce_spin"],
+          "transitions": [{ "idle_picker": "query.all_animations_finished || q.skin_id == 1" }],
+          "blend_transition": 0.5
+        },
+        "lid_shake": {
+          "animations": ["lid_shake"],
+          "transitions": [{ "idle_picker": "query.all_animations_finished || q.skin_id == 1" }],
+          "blend_transition": 0.5
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:block": {
+    "description": {
+      "identifier": "kubi:block_filler",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:custom_components": ["kubi:block_filler_function"],
+      "minecraft:material_instances": {
+        "up": {
+          "texture": "kubi:white_fill"
+        },
+        "down": {
+          "texture": "kubi:white_fill"
+        },
+        "south": {
+          "texture": "kubi:white_z"
+        },
+        "east": {
+          "texture": "kubi:white_x"
+        },
+        "*": {
+          "texture": "kubi:white"
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": "minecraft:geometry.full_block",
+        "material_instances": {
+          "up": {
+            "texture": "kubi:white_fill"
+          },
+          "down": {
+            "texture": "kubi:white_fill"
+          },
+          "*": {
+            "texture": "kubi:white"
+          }
+        }
+      }
+    }
+  }
+}

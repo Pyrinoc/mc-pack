@@ -1,0 +1,49 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "kubi:white_x"
+    },
+    "components": {
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "north": {
+          "texture": "kubi:white_x"
+        },
+        "south": {
+          "texture": "kubi:white_x"
+        },
+        "east": {
+          "texture": "kubi:white_x"
+        },
+        "west": {
+          "texture": "kubi:white_x"
+        },
+        "up": {
+          "texture": "kubi:white"
+        },
+        "down": {
+          "texture": "kubi:white"
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": "minecraft:geometry.full_block",
+        "material_instances": {
+          "up": {
+            "texture": "kubi:white"
+          },
+          "down": {
+            "texture": "kubi:white"
+          },
+          "*": {
+            "texture": "kubi:white_x",
+            "render_method": "opaque"
+          }
+        }
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.2
+      }
+    }
+  }
+}

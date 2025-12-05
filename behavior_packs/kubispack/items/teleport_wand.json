@@ -1,0 +1,17 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kubi:teleport_wand",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:icon": "kubi:teleport_wand",
+      "minecraft:hand_equipped": true,
+      "minecraft:interact_button": true,
+      "kubi:teleport_function": {}
+    }
+  }
+}

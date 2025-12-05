@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "kubi:present",
+      "population_control": "animal"
+    },
+    "conditions": [
+      {
+        "minecraft:difficulty_filter": {
+          "min": "peaceful",
+          "max": "hard"
+        },
+        "minecraft:weight": {
+          "default": 15
+        },
+        "minecraft:brightness_filter": {
+          "max": 8,
+          "min": 0
+        },
+        "minecraft:spawns_on_surface": {},
+        "minecraft:spawns_underground": {}
+      }
+    ]
+  }
+}

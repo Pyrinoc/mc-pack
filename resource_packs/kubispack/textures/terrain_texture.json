@@ -1,0 +1,179 @@
+{
+  "resource_pack_name": "kubi",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "kubi:christmas_lights": {
+      "textures": "textures/blocks/christmas_lights"
+    },
+    "kubi:maze": {
+      "textures": "textures/blocks/maze"
+    },
+    "kubi:white_fill": {
+      "textures": "textures/blocks/white_fill"
+    },
+    "kubi:pink": {
+      "textures": "textures/blocks/pink_letters/pink"
+    },
+    "kubi:pink_a": {
+      "textures": "textures/blocks/pink_letters/pink_a"
+    },
+    "kubi:pink_b": {
+      "textures": "textures/blocks/pink_letters/pink_b"
+    },
+    "kubi:pink_c": {
+      "textures": "textures/blocks/pink_letters/pink_c"
+    },
+    "kubi:pink_d": {
+      "textures": "textures/blocks/pink_letters/pink_d"
+    },
+    "kubi:pink_e": {
+      "textures": "textures/blocks/pink_letters/pink_e"
+    },
+    "kubi:pink_f": {
+      "textures": "textures/blocks/pink_letters/pink_f"
+    },
+    "kubi:pink_g": {
+      "textures": "textures/blocks/pink_letters/pink_g"
+    },
+    "kubi:pink_h": {
+      "textures": "textures/blocks/pink_letters/pink_h"
+    },
+    "kubi:pink_i": {
+      "textures": "textures/blocks/pink_letters/pink_i"
+    },
+    "kubi:pink_j": {
+      "textures": "textures/blocks/pink_letters/pink_j"
+    },
+    "kubi:pink_k": {
+      "textures": "textures/blocks/pink_letters/pink_k"
+    },
+    "kubi:pink_l": {
+      "textures": "textures/blocks/pink_letters/pink_l"
+    },
+    "kubi:pink_m": {
+      "textures": "textures/blocks/pink_letters/pink_m"
+    },
+    "kubi:pink_n": {
+      "textures": "textures/blocks/pink_letters/pink_n"
+    },
+    "kubi:pink_o": {
+      "textures": "textures/blocks/pink_letters/pink_o"
+    },
+    "kubi:pink_p": {
+      "textures": "textures/blocks/pink_letters/pink_p"
+    },
+    "kubi:pink_q": {
+      "textures": "textures/blocks/pink_letters/pink_q"
+    },
+    "kubi:pink_r": {
+      "textures": "textures/blocks/pink_letters/pink_r"
+    },
+    "kubi:pink_s": {
+      "textures": "textures/blocks/pink_letters/pink_s"
+    },
+    "kubi:pink_t": {
+      "textures": "textures/blocks/pink_letters/pink_t"
+    },
+    "kubi:pink_u": {
+      "textures": "textures/blocks/pink_letters/pink_u"
+    },
+    "kubi:pink_v": {
+      "textures": "textures/blocks/pink_letters/pink_v"
+    },
+    "kubi:pink_w": {
+      "textures": "textures/blocks/pink_letters/pink_w"
+    },
+    "kubi:pink_x": {
+      "textures": "textures/blocks/pink_letters/pink_x"
+    },
+    "kubi:pink_y": {
+      "textures": "textures/blocks/pink_letters/pink_y"
+    },
+    "kubi:pink_z": {
+      "textures": "textures/blocks/pink_letters/pink_z"
+    },
+    "kubi:white": {
+      "textures": "textures/blocks/white_letters/white"
+    },
+    "kubi:white_a": {
+      "textures": "textures/blocks/white_letters/white_a"
+    },
+    "kubi:white_b": {
+      "textures": "textures/blocks/white_letters/white_b"
+    },
+    "kubi:white_c": {
+      "textures": "textures/blocks/white_letters/white_c"
+    },
+    "kubi:white_d": {
+      "textures": "textures/blocks/white_letters/white_d"
+    },
+    "kubi:white_e": {
+      "textures": "textures/blocks/white_letters/white_e"
+    },
+    "kubi:white_f": {
+      "textures": "textures/blocks/white_letters/white_f"
+    },
+    "kubi:white_g": {
+      "textures": "textures/blocks/white_letters/white_g"
+    },
+    "kubi:white_h": {
+      "textures": "textures/blocks/white_letters/white_h"
+    },
+    "kubi:white_i": {
+      "textures": "textures/blocks/white_letters/white_i"
+    },
+    "kubi:white_j": {
+      "textures": "textures/blocks/white_letters/white_j"
+    },
+    "kubi:white_k": {
+      "textures": "textures/blocks/white_letters/white_k"
+    },
+    "kubi:white_l": {
+      "textures": "textures/blocks/white_letters/white_l"
+    },
+    "kubi:white_m": {
+      "textures": "textures/blocks/white_letters/white_m"
+    },
+    "kubi:white_n": {
+      "textures": "textures/blocks/white_letters/white_n"
+    },
+    "kubi:white_o": {
+      "textures": "textures/blocks/white_letters/white_o"
+    },
+    "kubi:white_p": {
+      "textures": "textures/blocks/white_letters/white_p"
+    },
+    "kubi:white_q": {
+      "textures": "textures/blocks/white_letters/white_q"
+    },
+    "kubi:white_r": {
+      "textures": "textures/blocks/white_letters/white_r"
+    },
+    "kubi:white_s": {
+      "textures": "textures/blocks/white_letters/white_s"
+    },
+    "kubi:white_t": {
+      "textures": "textures/blocks/white_letters/white_t"
+    },
+    "kubi:white_u": {
+      "textures": "textures/blocks/white_letters/white_u"
+    },
+    "kubi:white_v": {
+      "textures": "textures/blocks/white_letters/white_v"
+    },
+    "kubi:white_w": {
+      "textures": "textures/blocks/white_letters/white_w"
+    },
+    "kubi:white_x": {
+      "textures": "textures/blocks/white_letters/white_x"
+    },
+    "kubi:white_y": {
+      "textures": "textures/blocks/white_letters/white_y"
+    },
+    "kubi:white_z": {
+      "textures": "textures/blocks/white_letters/white_z"
+    }
+  }
+}
