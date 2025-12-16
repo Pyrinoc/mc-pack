@@ -69,9 +69,9 @@ function showAirFillForm(player: Player | undefined, location: Vector3) {
   const form = new ModalFormData()
     .title(`Block Filler`)
     .dropdown("Block", blockChoices)
-    .slider("X Size", -32, 32, { defaultValue: 5 })
-    .slider("Y Size", -32, 32, { defaultValue: 5 })
-    .slider("Z Size", -32, 32, { defaultValue: 5 });
+    .slider("X Size", -128, 128, { defaultValue: 5 })
+    .slider("Y Size", -128, 128, { defaultValue: 5 })
+    .slider("Z Size", -128, 128, { defaultValue: 5 });
 
   form.show(player).then((result: ModalFormResponse) => {
     if (result.canceled || result.formValues === undefined) return;
