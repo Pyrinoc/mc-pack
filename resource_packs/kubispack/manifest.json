@@ -1,25 +1,24 @@
 {
   "format_version": 2,
   "header": {
-    "name": "Kubi's Resource Pack v1.1.8",
-    "description": "Assorted stuff for fun -- v1.1.8",
-    "uuid": "99e65eeb-1cd4-4a5f-987b-37973f1c08aa",
-    "version": [1, 1, 8],
+    "name": "Kubi's Resource Pack v1.0.0",
+    "description": "Assorted stuff for fun -- v1.0.0",
+    "uuid": "825a589e-20cb-4dc8-a4c8-fd7d31244f0f",
+    "version": [1, 0, 0],
     "min_engine_version": [1, 20, 30]
   },
   "modules": [
     {
-      "description": "Kubi's Resource Pack Modules v1.1.8",
+      "description": "Kubi's Resource Pack Modules v1.0.0",
       "type": "resources",
-      "uuid": "054ea94d-460e-4f7c-bc91-a8789cbd7a9a",
-      "version": [1, 1, 8]
+      "uuid": "f0a9d99d-28e1-4c82-b59b-0812e1027fa0",
+      "version": [1, 0, 0]
     }
   ],
-  "capabilities": ["pbr"],
   "dependencies": [
     {
-      "uuid": "9c2a6a78-fa67-42aa-a43c-53d881448f0f",
-      "version": [1, 1, 8]
+      "uuid": "66482e6d-7722-4ee2-90e2-f0b2988fe14f",
+      "version": [1, 0, 0]
     }
   ]
 }

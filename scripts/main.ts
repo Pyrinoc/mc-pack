@@ -17,7 +17,6 @@ import { ModalFormData, ModalFormResponse } from "@minecraft/server-ui";
 import { fillV3 } from "./utilities.js";
 import { MinecraftBlockTypes } from "@minecraft/vanilla-data";
 import { setupSurvivalGame } from "./survival/survival.js";
-import { presentClicked } from "./christmas/christmas.js";
 
 const SECOND = 20;
 const EQUIP_SLOTS = [EquipmentSlot.Chest, EquipmentSlot.Feet, EquipmentSlot.Head, EquipmentSlot.Legs];
@@ -30,12 +29,6 @@ function mainTick() {
   }
   system.run(mainTick);
 }
-
-world.beforeEvents.playerInteractWithEntity.subscribe((e) => {
-  if (e.target.typeId === "kubi:present" || e.target.typeId === "kubi:present_no_fireworks") {
-    presentClicked(e.player, e.target);
-  }
-});
 
 system.beforeEvents.startup.subscribe((init: StartupEvent) => {
   TPCommand.setup(init);

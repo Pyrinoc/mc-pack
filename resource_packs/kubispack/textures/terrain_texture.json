@@ -4,9 +4,6 @@
   "padding": 8,
   "num_mip_levels": 4,
   "texture_data": {
-    "kubi:christmas_lights": {
-      "textures": "textures/blocks/christmas_lights"
-    },
     "kubi:maze": {
       "textures": "textures/blocks/maze"
     },

@@ -1,19 +1,19 @@
 {
   "format_version": 2,
   "header": {
-    "name": "Kubi's Behavior Pack v1.1.8",
-    "description": "Assorted stuff for fun -- v1.1.8",
-    "uuid": "9c2a6a78-fa67-42aa-a43c-53d881448f0f",
-    "version": [1, 1, 8],
+    "name": "Kubi No Presents v1.0.0",
+    "description": "Kubi's pack with no presents.",
+    "uuid": "66482e6d-7722-4ee2-90e2-f0b2988fe14f",
+    "version": [1, 0, 0],
     "min_engine_version": [1, 20, 30]
   },
   "modules": [
     {
-      "description": "Kubi's Typescript Project v1.1.8",
+      "description": "Kubi's Typescript Project v1.0.0",
       "language": "javascript",
       "type": "script",
-      "uuid": "e1228367-e49d-4686-8e05-b3d26b4caf67",
-      "version": [1, 1, 8],
+      "uuid": "57d5ba6e-2adb-47a8-9140-9c4f1a9e5c96",
+      "version": [1, 0, 0],
       "entry": "scripts/main.js"
     }
   ],
@@ -25,11 +25,10 @@
     {
       "module_name": "@minecraft/server-ui",
       "version": "2.0.0"
+    },
+    {
+      "uuid": "825a589e-20cb-4dc8-a4c8-fd7d31244f0f",
+      "version": [1, 0, 0]
     }
-  ],
-  "metadata": {
-    "generated_with": {
-      "blockbench_item_wizard": ["1.2.4"]
-    }
-  }
+  ]
 }
