@@ -1,27 +1,71 @@
 {
   "format_version": "1.8.0",
   "animations": {
-    "animation.present.idle_bounce": {
+    "animation.present.idle_bounce1": {
       "loop": true,
-      "animation_length": 0.3333,
-      "anim_time_update": "(1/math.max(1,4-4*v.animation_random_1))*q.delta_time + q.anim_time",
+      "animation_length": 0.25,
       "bones": {
         "present": {
-          "position": [0, "(4+4*v.animation_random_1)*Math.sin(q.anim_time*720)", 0]
+          "position": [0, "2*Math.sin(q.anim_time*720)", 0]
         }
       }
     },
-    "animation.present.idle_bounce_lean": {
+    "animation.present.idle_bounce2": {
       "loop": true,
       "animation_length": 0.3333,
       "bones": {
         "present": {
-          "rotation": [
-            "30*(v.animation_random_2-0.5)*Math.sin(q.anim_time*540)",
-            0,
-            "30*(v.animation_random_3-0.5)*Math.sin(q.anim_time*540)"
-          ],
-          "position": [0, "(3+v.animation_random_1*4)*Math.sin(q.anim_time*540)", 0]
+          "position": [0, "4*Math.sin(q.anim_time*540)", 0]
+        }
+      }
+    },
+    "animation.present.idle_bounce3": {
+      "loop": true,
+      "animation_length": 0.5,
+      "blend_weight": 0.2,
+      "bones": {
+        "present": {
+          "position": [0, "6*Math.sin(q.anim_time*360)", 0]
+        }
+      }
+    },
+    "animation.present.idle_bounce2_x": {
+      "loop": true,
+      "animation_length": 0.3333,
+      "bones": {
+        "present": {
+          "rotation": ["-15*Math.sin(q.anim_time*540)", 0, 0],
+          "position": [0, "4*Math.sin(q.anim_time*540)", 0]
+        }
+      }
+    },
+    "animation.present.idle_bounce2_z": {
+      "loop": true,
+      "animation_length": 0.3333,
+      "bones": {
+        "present": {
+          "rotation": [0, 0, "15*Math.sin(q.anim_time*540)"],
+          "position": [0, "4*Math.sin(q.anim_time*540)", 0]
+        }
+      }
+    },
+    "animation.present.idle_bounce2_nx": {
+      "loop": true,
+      "animation_length": 0.3333,
+      "bones": {
+        "present": {
+          "rotation": ["15*Math.sin(q.anim_time*540)", 0, 0],
+          "position": [0, "4*Math.sin(q.anim_time*540)", 0]
+        }
+      }
+    },
+    "animation.present.idle_bounce2_nz": {
+      "loop": true,
+      "animation_length": 0.3333,
+      "bones": {
+        "present": {
+          "rotation": [0, 0, "-15*Math.sin(q.anim_time*540)"],
+          "position": [0, "4*Math.sin(q.anim_time*540)", 0]
         }
       }
     },
@@ -30,7 +74,17 @@
       "animation_length": 1,
       "bones": {
         "present": {
-          "rotation": [0, "(v.animation_random_1/math.abs(v.animation_random_1))*q.anim_time*360", 0],
+          "rotation": [0, "-q.anim_time*360", 0],
+          "position": [0, "10*Math.sin(q.anim_time*180)", 0]
+        }
+      }
+    },
+    "animation.present.idle_bounce_nspin": {
+      "loop": true,
+      "animation_length": 1,
+      "bones": {
+        "present": {
+          "rotation": [0, "q.anim_time*360", 0],
           "position": [0, "10*Math.sin(q.anim_time*180)", 0]
         }
       }
@@ -47,7 +101,7 @@
         }
       }
     },
-    "animation.present.death": {
+    "animation.present.found": {
       "animation_length": 3,
       "anim_time_update": "0.8*q.delta_time + q.anim_time",
       "loop": false,

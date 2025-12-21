@@ -17,18 +17,19 @@
       "initial_state": "idle_picker",
       "states": {
         "idle_picker": {
-          "on_exit": [
-            "v.animation_random_1=math.random(0,1);",
-            "v.animation_random_2=math.random(0,1);",
-            "v.animation_random_3=math.random(0,1);"
-          ],
           "transitions": [
             { "found": "q.skin_id == 1" },
-            { "idle_bounce": "Math.random_integer(0,3)<4" },
-            { "idle_bounce_lean": "Math.random_integer(0,3)==10" },
-            { "idle_bounce_spin": "Math.random_integer(0,3)==20" },
-            { "lid_shake": "Math.random_integer(0,3)==30" },
-            { "nothing": "Math.random_integer(0,3)>40" }
+            { "idle_bounce1": "Math.random_integer(0,13)==0" },
+            { "idle_bounce2": "Math.random_integer(0,13)==1" },
+            { "idle_bounce3": "Math.random_integer(0,13)==2" },
+            { "idle_bounce2_x": "Math.random_integer(0,13)==3" },
+            { "idle_bounce2_z": "Math.random_integer(0,13)==4" },
+            { "idle_bounce2_nx": "Math.random_integer(0,13)==5" },
+            { "idle_bounce2_nz": "Math.random_integer(0,13)==6" },
+            { "idle_bounce_spin": "Math.random_integer(0,13)==7" },
+            { "idle_bounce_nspin": "Math.random_integer(0,13)==8" },
+            { "lid_shake": "Math.random_integer(0,13)==9" },
+            { "nothing": "Math.random_integer(0,13)>9" }
           ]
         },
         "found": {
@@ -40,18 +41,48 @@
           "transitions": [{ "idle_picker": "query.all_animations_finished || q.skin_id == 1" }],
           "blend_transition": 0.5
         },
-        "idle_bounce": {
-          "animations": ["idle_bounce"],
+        "idle_bounce1": {
+          "animations": ["idle_bounce1"],
           "transitions": [{ "idle_picker": "query.all_animations_finished || q.skin_id == 1" }],
           "blend_transition": 0.5
         },
-        "idle_bounce_lean": {
-          "animations": ["idle_bounce_lean"],
+        "idle_bounce2": {
+          "animations": ["idle_bounce2"],
+          "transitions": [{ "idle_picker": "query.all_animations_finished || q.skin_id == 1" }],
+          "blend_transition": 0.5
+        },
+        "idle_bounce3": {
+          "animations": ["idle_bounce3"],
+          "transitions": [{ "idle_picker": "query.all_animations_finished || q.skin_id == 1" }],
+          "blend_transition": 0.5
+        },
+        "idle_bounce2_x": {
+          "animations": ["idle_bounce2_x"],
+          "transitions": [{ "idle_picker": "query.all_animations_finished || q.skin_id == 1" }],
+          "blend_transition": 0.5
+        },
+        "idle_bounce2_z": {
+          "animations": ["idle_bounce2_z"],
+          "transitions": [{ "idle_picker": "query.all_animations_finished || q.skin_id == 1" }],
+          "blend_transition": 0.5
+        },
+        "idle_bounce2_nx": {
+          "animations": ["idle_bounce2_nx"],
+          "transitions": [{ "idle_picker": "query.all_animations_finished || q.skin_id == 1" }],
+          "blend_transition": 0.5
+        },
+        "idle_bounce2_nz": {
+          "animations": ["idle_bounce2_nz"],
           "transitions": [{ "idle_picker": "query.all_animations_finished || q.skin_id == 1" }],
           "blend_transition": 0.5
         },
         "idle_bounce_spin": {
           "animations": ["idle_bounce_spin"],
+          "transitions": [{ "idle_picker": "query.all_animations_finished || q.skin_id == 1" }],
+          "blend_transition": 0.5
+        },
+        "idle_bounce_nspin": {
+          "animations": ["idle_bounce_nspin"],
           "transitions": [{ "idle_picker": "query.all_animations_finished || q.skin_id == 1" }],
           "blend_transition": 0.5
         },

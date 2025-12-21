@@ -4,7 +4,7 @@
     "description": {
       "identifier": "kubi:present",
       "materials": {
-        "default": "entity_alphatest"
+        "default": "entity_emissive_alpha"
       },
       "particle_effects": {
         "present_found": "kubi:present_found",
@@ -20,13 +20,19 @@
       },
       "render_controllers": ["controller.render.present"],
       "animations": {
-        "nothing": "animation.present.nothing",
-        "idle_bounce": "animation.present.idle_bounce",
-        "idle_bounce_lean": "animation.present.idle_bounce_lean",
+        "idle": "controller.animation.present.idle",
+        "idle_bounce1": "animation.present.idle_bounce1",
+        "idle_bounce2": "animation.present.idle_bounce2",
+        "idle_bounce3": "animation.present.idle_bounce3",
+        "idle_bounce2_x": "animation.present.idle_bounce2_x",
+        "idle_bounce2_z": "animation.present.idle_bounce2_z",
+        "idle_bounce2_nx": "animation.present.idle_bounce2_nx",
+        "idle_bounce2_nz": "animation.present.idle_bounce2_nz",
         "idle_bounce_spin": "animation.present.idle_bounce_spin",
+        "idle_bounce_nspin": "animation.present.idle_bounce_nspin",
+        "nothing": "animation.present.nothing",
         "lid_shake": "animation.present.lid_shake",
-        "found": "animation.present.death",
-        "idle": "controller.animation.present.idle"
+        "found": "animation.present.found"
       },
       "scripts": { "animate": ["idle"] },
       "spawn_egg": {
