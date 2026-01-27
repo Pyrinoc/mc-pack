@@ -12,7 +12,7 @@
           "max": "hard"
         },
         "minecraft:weight": {
-          "default": 15
+          "default": 1
         },
         "minecraft:brightness_filter": {
           "max": 8,
