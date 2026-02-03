@@ -1,25 +1,23 @@
 {
-  "format_version": "1.12.0",
+  "format_version": "1.21.80",
   "minecraft:recipe_shaped": {
     "description": {
       "identifier": "kubi:teleport_wand"
     },
     "tags": ["crafting_table"],
-    "pattern": [
-      " DD",
-      " SD",
-      "S  "
-    ],
+    "pattern": [" DD", " SD", "S  "],
     "key": {
-      "D": "minecraft:diamond",
-      "S": "minecraft:stick"
+      "D": { "item": "minecraft:diamond" },
+      "S": { "item": "minecraft:stick" }
     },
-    "unlock": [{
-      "item": "minecraft:diamond"
-    }],
-    "result": [{
+    "unlock": [
+      {
+        "item": "minecraft:diamond"
+      }
+    ],
+    "result": {
       "item": "kubi:teleport_wand",
       "count": 5
-    }]
+    }
   }
 }

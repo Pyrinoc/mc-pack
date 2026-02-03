@@ -29,13 +29,7 @@ export function rl<T>(list: T[]): T {
 }
 
 export function vStr(v: VectorXZ | Vector3): string {
-  // let yStr =
-  // let yStr = ""
-  // if ('y' in v) {
-  //   yStr = `${v.y},`
-  // }
   return `[${Math.floor(v.x)},${"y" in v ? `${v.y},` : ""}${Math.floor(v.z)}]`;
-  // return "[?,?,?]";
 }
 
 export function fillV3(block: MinecraftBlockTypes | BlockPermutation, from: Vector3, to: Vector3, p?: Player) {
