@@ -1,19 +1,19 @@
 {
   "format_version": 2,
   "header": {
-    "name": "Kubi's Behavior Pack v1.2.0",
-    "description": "Assorted stuff for fun -- v1.2.0",
+    "name": "Kubi's Behavior Pack v1.2.1",
+    "description": "Assorted stuff for fun -- v1.2.1",
     "uuid": "9c2a6a78-fa67-42aa-a43c-53d881448f0f",
-    "version": [1, 2, 0],
+    "version": [1, 2, 1],
     "min_engine_version": [1, 20, 30]
   },
   "modules": [
     {
-      "description": "Kubi's Typescript Project v1.2.0",
+      "description": "Kubi's Typescript Project v1.2.1",
       "language": "javascript",
       "type": "script",
       "uuid": "e1228367-e49d-4686-8e05-b3d26b4caf67",
-      "version": [1, 2, 0],
+      "version": [1, 2, 1],
       "entry": "scripts/main.js"
     }
   ],
@@ -28,7 +28,7 @@
     },
     {
       "uuid": "99e65eeb-1cd4-4a5f-987b-37973f1c08aa",
-      "version": [1, 2, 0]
+      "version": [1, 2, 1]
     }
   ],
   "metadata": {

@@ -57,3 +57,4 @@ item.kubi:teleport_wand=Teleportation Wand
 entity.kubi:present.name=Present
 item.spawn_egg.entity.kubi:present.name=Spawn Present
 tile.kubi:christmas_lights.name=Christmas Lights
+tile.kubi:diamond_table.name=Diamond Table

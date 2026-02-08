@@ -217,7 +217,7 @@ function showTPSummonForm(player: Player) {
   });
 }
 
-function runActionForm(player: Player, choices: string[], title: string, fn: (choice: string) => void) {
+export function runActionForm(player: Player, choices: string[], title: string, fn: (choice: string) => void) {
   const form = new ActionFormData().title(title);
 
   for (let choice of choices) {

@@ -4,6 +4,9 @@
   "padding": 8,
   "num_mip_levels": 4,
   "texture_data": {
+    "kubi:diamond_table": {
+      "textures": "textures/blocks/diamond_table"
+    },
     "kubi:christmas_lights": {
       "textures": "textures/blocks/christmas_lights"
     },

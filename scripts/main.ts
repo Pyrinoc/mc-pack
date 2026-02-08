@@ -17,6 +17,7 @@ import { ModalFormData, ModalFormResponse } from "@minecraft/server-ui";
 import { fillV3 } from "./utilities.js";
 import { MinecraftBlockTypes, MinecraftItemTypes } from "@minecraft/vanilla-data";
 import { presentClicked } from "./christmas/christmas.js";
+import { diamondTableUse } from "./diamond_table.js";
 
 const SECOND = 20;
 const EQUIP_SLOTS = [EquipmentSlot.Chest, EquipmentSlot.Feet, EquipmentSlot.Head, EquipmentSlot.Legs];
@@ -72,6 +73,9 @@ system.beforeEvents.startup.subscribe((data) => {
   });
   data.blockComponentRegistry.registerCustomComponent("kubi:block_filler_function", {
     onPlayerInteract: (data) => showAirFillForm(data.player, data.block.location),
+  });
+  data.blockComponentRegistry.registerCustomComponent("kubi:diamond_table_function", {
+    onPlayerInteract: (data) => diamondTableUse(data.player, data.block.location),
   });
 });
 
