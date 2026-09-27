@@ -10,6 +10,7 @@ import {
   EntityEquippableComponent,
   EquipmentSlot,
   Vector3,
+  EntityDieAfterEvent,
 } from "@minecraft/server";
 import TPCommand, { showTPForm } from "./TPCommand.js";
 import MazeCmd, { showMazeForm } from "./MazeGen.js";
@@ -54,6 +55,20 @@ function mainTick() {
 world.beforeEvents.playerInteractWithEntity.subscribe((e) => {
   if (e.target.typeId === "kubi:present") {
     presentClicked(e.player, e.target);
+  }
+});
+
+world.afterEvents.entityDie.subscribe((event: EntityDieAfterEvent) => {
+  const deadEntity = event.deadEntity;
+
+  if (deadEntity.typeId === "minecraft:player") {
+    const player = deadEntity as Player;
+    const location: Vector3 = player.location;
+    const dimensionId = player.dimension.id;
+
+    player.setDynamicProperty("last_death_location", location);
+    player.setDynamicProperty("last_death_dimension", dimensionId);
+    player.sendMessage(`You died at ${Math.floor(location.x)},${Math.floor(location.y)},${Math.floor(location.z)}.`);
   }
 });
 

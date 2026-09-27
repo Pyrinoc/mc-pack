@@ -29,7 +29,7 @@ export function rl<T>(list: T[]): T {
 }
 
 export function vStr(v: VectorXZ | Vector3): string {
-  return `[${Math.floor(v.x)},${"y" in v ? `${v.y},` : ""}${Math.floor(v.z)}]`;
+  return `[${Math.floor(v.x)},${"y" in v ? `${Math.floor(v.y)},` : ""}${Math.floor(v.z)}]`;
 }
 
 export function fillV3(block: MinecraftBlockTypes | BlockPermutation, from: Vector3, to: Vector3, p?: Player) {
@@ -57,8 +57,6 @@ export function removeSelectedSlotItemStack(player: Player) {
   if (item === undefined) {
     return;
   }
-  // item.amount--
-  // player.sendMessage("Trying new item stack decrementing.")
   if (item.amount == 1) {
     inventory.container.setItem(player.selectedSlotIndex);
     return;

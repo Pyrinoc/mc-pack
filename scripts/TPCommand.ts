@@ -69,6 +69,10 @@ function setTeleport(player: Player, id: string, loc: Vector3) {
   for (let i = 0; i < tpCount; i++) {
     const [nameStr, locStr] = tpDataStrings(i);
 
+    loc.x = Math.floor(loc.x);
+    loc.y = Math.floor(loc.y);
+    loc.z = Math.floor(loc.z);
+
     let tpName: string = world.getDynamicProperty(nameStr) as string;
     if (tpName === TP_DELETED_STRING) {
       world.setDynamicProperty(nameStr, id);
@@ -89,6 +93,16 @@ function setTeleport(player: Player, id: string, loc: Vector3) {
 // Teleports the player to the location at `id`. Returns false if the location does not exist.
 function goTeleport(players: Player[], id: string, spawnParticle: boolean): boolean {
   let loc = getTPLocation(id);
+  let teleported = false;
+
+  if (loc === undefined) {
+    return teleported;
+  }
+  players.forEach((p) => (teleported = movePlayer(p, loc, spawnParticle) || teleported));
+  return teleported;
+}
+
+function goTeleportLocation(players: Player[], loc: Vector3, spawnParticle: boolean): boolean {
   let teleported = false;
 
   if (loc === undefined) {
@@ -162,12 +176,22 @@ export function showTPForm(player: Player, item?: ItemStack) {
       }
     }
   }
+  const deathLocationProperty = player.getDynamicProperty("last_death_location");
+  if (deathLocationProperty !== undefined) {
+    const loc = deathLocationProperty as Vector3;
+    z(`Last Death ${vStr(loc)}`, () => {
+      let used = goTeleportLocation([player], loc, true);
+      if (used && item && player.getGameMode() == GameMode.Survival) {
+        player.selectedSlotIndex;
+        removeSelectedSlotItemStack(player);
+      }
+    });
+  }
   getTPLocations().forEach((v, k) => {
     z(`${k} ${vStr(v)}`, () => {
       let used = goTeleport([player], k, true);
       if (used && item && player.getGameMode() == GameMode.Survival) {
         player.selectedSlotIndex;
-        // removeItemStack(player, item)
         removeSelectedSlotItemStack(player);
       }
     });
