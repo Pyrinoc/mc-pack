@@ -232,8 +232,7 @@
         }
       },
       "particle_effects": {
-        "0.08": { "effect": "present_found" },
-        "0.125": { "effect": "present_fireworks" }
+        "0.08": { "effect": "present_found" }
       }
     }
   }
