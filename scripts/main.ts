@@ -16,32 +16,14 @@ import TPCommand, { showTPForm } from "./TPCommand.js";
 import MazeCmd, { showMazeForm } from "./MazeGen.js";
 import { ModalFormData, ModalFormResponse } from "@minecraft/server-ui";
 import { fillV3 } from "./utilities.js";
-import { MinecraftBlockTypes, MinecraftItemTypes } from "@minecraft/vanilla-data";
+import { MinecraftBlockTypes } from "@minecraft/vanilla-data";
 import { presentClicked } from "./christmas/christmas.js";
 import { diamondTableUse } from "./diamond_table.js";
+import { setupRepairable, spawnAddonBook, useAddonBook } from "./addon_book.js";
 
 const SECOND = 20;
 const EQUIP_SLOTS = [EquipmentSlot.Chest, EquipmentSlot.Feet, EquipmentSlot.Head, EquipmentSlot.Legs];
-const REPAIRABLE = new Set<string>([
-  MinecraftItemTypes.DiamondAxe,
-  MinecraftItemTypes.DiamondPickaxe,
-  MinecraftItemTypes.DiamondShovel,
-  MinecraftItemTypes.DiamondHoe,
-  MinecraftItemTypes.DiamondSword,
-  MinecraftItemTypes.NetheriteAxe,
-  MinecraftItemTypes.NetheritePickaxe,
-  MinecraftItemTypes.NetheriteShovel,
-  MinecraftItemTypes.NetheriteHoe,
-  MinecraftItemTypes.NetheriteSword,
-  MinecraftItemTypes.DiamondHelmet,
-  MinecraftItemTypes.DiamondChestplate,
-  MinecraftItemTypes.DiamondLeggings,
-  MinecraftItemTypes.DiamondBoots,
-  MinecraftItemTypes.NetheriteHelmet,
-  MinecraftItemTypes.NetheriteChestplate,
-  MinecraftItemTypes.NetheriteLeggings,
-  MinecraftItemTypes.NetheriteBoots,
-]);
+export const REPAIRABLE = new Set<string>([]);
 
 function mainTick() {
   if (system.currentTick % (15 * SECOND) === 0) {
@@ -72,9 +54,19 @@ world.afterEvents.entityDie.subscribe((event: EntityDieAfterEvent) => {
   }
 });
 
+world.afterEvents.playerSpawn.subscribe((event) => {
+  spawnAddonBook(event);
+});
+
+world.beforeEvents.itemUse.subscribe((event) => {
+  const item = event.itemStack;
+  if (item && item.typeId === "kubi:guide_book") useAddonBook(event);
+});
+
 system.beforeEvents.startup.subscribe((init: StartupEvent) => {
   TPCommand.setup(init);
   MazeCmd.setup(init);
+  setupRepairable();
 });
 
 system.run(mainTick);
@@ -149,7 +141,7 @@ function createNewUndamagedItem(item: ItemStack | undefined): ItemStack | undefi
   if (
     item === undefined ||
     itemDurability === undefined ||
-    itemDurability.damage < 0.25 * itemDurability.maxDurability ||
+    itemDurability.damage < 0.4 * itemDurability.maxDurability ||
     !REPAIRABLE.has(item.type.id)
   ) {
     return undefined;

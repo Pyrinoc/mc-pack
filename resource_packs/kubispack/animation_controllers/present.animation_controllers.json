@@ -5,7 +5,7 @@
       "initial_state": "fireworks_on",
       "states": {
         "fireworks_on": {
-          "particle_effects": [{ "effect": "present_fireworks" }],
+          "particle_effects": [{ "effect": "present_firework_rocket" }],
           "transitions": [{ "fireworks_off": "q.skin_id == 1" }]
         },
         "fireworks_off": {

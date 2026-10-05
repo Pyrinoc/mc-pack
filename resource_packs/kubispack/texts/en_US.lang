@@ -54,6 +54,7 @@ tile.kubi:maze_creator.name=Maze Creator
 kubi:white_letters=White Letters
 kubi:pink_letters=Pink Letters
 item.kubi:teleport_wand=Teleportation Wand
+item.kubi:guide_book=Kubi's Pack Settings
 entity.kubi:present.name=Present
 item.spawn_egg.entity.kubi:present.name=Spawn Present
 tile.kubi:christmas_lights.name=Christmas Lights
