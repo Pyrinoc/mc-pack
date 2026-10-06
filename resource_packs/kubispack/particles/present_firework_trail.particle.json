@@ -1,0 +1,51 @@
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "description": {
+      "identifier": "kubi:present_firework_trail",
+      "basic_render_parameters": {
+        "material": "particles_add",
+        "texture": "textures/particle/particles"
+      }
+    },
+    "components": {
+      "minecraft:emitter_rate_instant": {
+        "num_particles": 2
+      },
+      "minecraft:emitter_lifetime_once": {
+        "active_time": 0.05
+      },
+      "minecraft:emitter_shape_point": {
+        "direction": ["math.random(-1,1)", "math.random(-1,0.2)", "math.random(-1,1)"]
+      },
+      "minecraft:particle_lifetime_expression": {
+        "max_lifetime": "0.3+0.4*variable.particle_random_1"
+      },
+      "minecraft:particle_initial_speed": "0.05+0.1*variable.particle_random_2",
+      "minecraft:particle_motion_dynamic": {
+        "linear_acceleration": [0, -0.4, 0],
+        "linear_drag_coefficient": 2
+      },
+      "minecraft:particle_appearance_billboard": {
+        "size": [0.03, 0.03],
+        "facing_camera_mode": "rotate_xyz",
+        "uv": {
+          "texture_width": 128,
+          "texture_height": 128,
+          "uv": ["math.floor(variable.particle_random_2*3)*8", 96],
+          "uv_size": [8, 8]
+        }
+      },
+      "minecraft:particle_appearance_tinting": {
+        "color": {
+          "interpolant": "variable.particle_age/variable.particle_lifetime",
+          "gradient": {
+            "0.0": "#FFFFF0C0",
+            "0.3": "#FFFFC060",
+            "1.0": "#00000000"
+          }
+        }
+      }
+    }
+  }
+}
