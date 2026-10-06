@@ -32,6 +32,6 @@ There are no tests. To debug, use the VS Code launch config "Debug with Minecraf
 
 ## Versioning conventions
 
-- **`format_version`:** keep block, item, recipe, entity and item_catalog files on the current Bedrock release's version (1.26.50 as of Oct 2026). Use Mojang's `bedrock-samples` repo (`version.json` and the vanilla packs) and the Microsoft Learn creator docs to check what's current. Resource-pack animation (1.8.0), animation controller, render controller, client entity and particle files (1.10.0) correctly use older versions.
+- **`format_version`:** keep block, item, recipe, entity and item_catalog files on the current Bedrock release's version (1.26.50 as of Oct 2026). Use Mojang's `bedrock-samples` repo (`version.json` and the vanilla packs) and the Microsoft Learn creator docs to check what's current. Resource-pack animation (1.8.0), animation controller, render controller and client entity files (1.10.0) correctly use older versions. Particles are the exception: vanilla moved them to 1.26.x, and a lit `particles_blend` particle on 1.10.0 appeared to ignore tint alpha under Vibrant Visuals, so new particles should use the version vanilla uses (1.26.30 as of Oct 2026).
 - **Manifests:** the `@minecraft/server` / `@minecraft/server-ui` versions in `behavior_packs/kubispack/manifest.json` must match the APIs the scripts use (npm versions are in `package.json`). Bump the pack `version` arrays together in both manifests.
 - **Text strings:** user-facing names live in `resource_packs/kubispack/texts/en_US.lang`.

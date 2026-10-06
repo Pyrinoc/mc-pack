@@ -8,7 +8,6 @@
       },
       "particle_effects": {
         "present_found": "kubi:present_found",
-        "present_fireworks": "kubi:present_fireworks",
         "present_firework_rocket": "kubi:present_firework_rocket"
       },
       "textures": {

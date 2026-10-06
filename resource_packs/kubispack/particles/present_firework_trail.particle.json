@@ -5,7 +5,7 @@
       "identifier": "kubi:present_firework_trail",
       "basic_render_parameters": {
         "material": "particles_add",
-        "texture": "textures/particle/particles"
+        "texture": "textures/particle/present_sparks"
       }
     },
     "components": {
@@ -30,9 +30,9 @@
         "size": [0.03, 0.03],
         "facing_camera_mode": "rotate_xyz",
         "uv": {
-          "texture_width": 128,
-          "texture_height": 128,
-          "uv": ["math.floor(variable.particle_random_2*3)*8", 96],
+          "texture_width": 64,
+          "texture_height": 16,
+          "uv": ["math.floor(variable.particle_random_2*3)*8", 8],
           "uv_size": [8, 8]
         }
       },

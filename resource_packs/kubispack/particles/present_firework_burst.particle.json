@@ -5,7 +5,7 @@
       "identifier": "kubi:present_firework_burst",
       "basic_render_parameters": {
         "material": "particles_add",
-        "texture": "textures/particle/particles"
+        "texture": "textures/particle/present_sparks"
       }
     },
     "components": {
@@ -35,8 +35,8 @@
         "size": ["0.03+variable.particle_random_1/30", "0.03+variable.particle_random_1/30"],
         "facing_camera_mode": "rotate_xyz",
         "uv": {
-          "texture_width": 128,
-          "texture_height": 128,
+          "texture_width": 64,
+          "texture_height": 16,
           "uv": ["math.floor(variable.particle_random_2*8)*8", 0],
           "uv_size": [8, 8]
         }
@@ -45,14 +45,14 @@
         "color": {
           "interpolant": "(2*math.floor(v.emitter_random_1*4)+v.particle_random_1)/7",
           "gradient": {
-            "0.0": "#FF4040FF",
-            "0.14": "#ffffffff",
-            "0.29": "#40FF40FF",
-            "0.43": "#ffffffff",
-            "0.57": "#4040FFFF",
-            "0.71": "#ffffffff",
-            "0.86": "#FF40FFFF",
-            "1.0": "#ffffffff"
+            "0.0": "#FFFF4040",
+            "0.14": "#FFFFFFFF",
+            "0.29": "#FF40FF40",
+            "0.43": "#FFFFFFFF",
+            "0.57": "#FF4040FF",
+            "0.71": "#FFFFFFFF",
+            "0.86": "#FFFF40FF",
+            "1.0": "#FFFFFFFF"
           }
         }
       }
